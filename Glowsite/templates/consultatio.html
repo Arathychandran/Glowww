@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="cons.css">
+    </head>
+<body>
+
+<div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Meetup-Form</h1>
+      <p id="description" class="description text-center">
+        Let's know about your skin 
+      </p>
+    </header>
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name"></label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="form-control"
+          placeholder="What specific skin concerns or problems are you experiencing"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email"></label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          placeholder="Have you experinced this skin issue before"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email"></label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          placeholder="Symptoms"
+          required
+        />
+
+      </div>
+      
+      <div class="form-group">
+        <label id="number-label" for="number"
+          ></label
+        >
+        <input
+          type="number"
+          name="age"
+          id="number"
+          min="10"
+          max="99"
+          class="form-control"
+          placeholder="How long have you faced this issue"
+        />
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email"></label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          placeholder="What triggers or worsen your condition"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email"></label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          placeholder="Allergies or sensitivity"
+          required
+        />
+      </div>
+     
+  
+      
+      <div class="form-group">
+        <p>
+          What do like the most?
+        </p>
+        <select id="most-like" name="mostLike" class="form-control" required>
+          <option disabled selected value>Language Preference</option>
+          <option value="webdevelopment">English</option>
+          <option value="machinelearning">Hindi</option>
+          <option value="cp">Native Language</option>
+         
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <p>
+        Whom would like to prefer
+          <span class="clue">(Check all that apply)</span>
+        </p>
+  
+        <label
+          ><input
+            name="prefer"
+            value="front-end-projects"
+            type="checkbox"
+            class="input-checkbox"
+          />Dermatologist(english medicine)</label
+        >
+        <label>
+          <input
+            name="prefer"
+            value="back-end-projects"
+            type="checkbox"
+            class="input-checkbox"
+          />Ayurvedic practitioner</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="data-science"
+            type="checkbox"
+            class="input-checkbox"
+          />Beautician or Esthetician</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="challenges"
+            type="checkbox"
+            class="input-checkbox"
+          />Homeopath</label
+        >
+      
+        
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email"></label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          placeholder="Which time would you prefer"
+          required
+        />
+      </div>
+      
+      <div class="form-group">
+        <p>Any comments or suggestions?</p>
+        <textarea
+          id="comments"
+          class="input-textarea"
+          name="comment"
+          placeholder="Enter your comment here..."
+        ></textarea>
+      </div>
+     
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

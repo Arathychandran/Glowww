@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Glow</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="..\static\vendor\aos\aos.css" rel="stylesheet">
+  <link href="..\static\vendor\bootstrap\css\bootstrap.min.css" rel="stylesheet">
+  <link href="..\static\vendor\bootstrap-icons\bootstrap-icons.css" rel="stylesheet">
+  <link href="..\static\vendor\boxicons\css\boxicons.min.css" rel="stylesheet">
+  <link href="..\static\vendor\glightbox\css\glightbox.min.css" rel="stylesheet">
+  <link href="..\static\vendor\remixicon\remixicon.css" rel="stylesheet">
+  <link href="..\static\vendor\swiper\swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="..\static\css\sign.css" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- <div>
+  {% with messages = get_flashed_messages(with_categories=true)%}
+        {% if messages %}
+        {% for category, message in messages %} 
+        {% if category == 'error' %}
+          <div class="alert alert-danger alter-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        {% else %}
+          <div class="alert alert-success alter-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        {% endif %}
+        {% endfor %} 
+        {% endif %} 
+        {% endwith %}
+      </div> -->
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="{{ url_for ('views.process_signup') }}" method="POST">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span style="font-size:18px;">or use your email for registration</span>
+                <input type="text" name="name" placeholder="Name" />
+                <input type="email" name="email" placeholder="Email" />
+                <input type="password" name="password" placeholder="Password" />
+                <button type="submit" style="font-size:15px;">Sign Up as a Receptive</button>
+                <button type="submit" style="font-size:15px;">Sign Up as a Doctor</button>
+
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="{{url_for('auth.signin')}}" method="POST">
+                <h1 style="color:#4abdac;">Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span style="font-size:18px;">or use your account</span>
+                <input type="email" name="email" placeholder="Email" />
+                <input type="password" name="password" placeholder="Password" />
+                <a style="color:#4abdac;font-size:20px;" href="#">Forgot your password?</a>
+                <button style="font-size:15px;">Sign In</button>
+            </form>
+          </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p style="font-size:18px;">To stay connected with us please login with your personal info</p>
+                    <button class="ghost" id="SignIn" style="font-size:15px;">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p style="font-size:18px;">Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="SignUp" style="font-size:15px;">Sign Up</button>
+                </div>
+            </div>
+        </div>
+</div>
+
+<script>
+  const SignUpButton = document.getElementById("SignUp");
+const SignInButton = document.getElementById("SignIn");
+const container = document.getElementById("container");
+
+SignUpButton.addEventListener('click', () => {
+    container.classList.add("right-panel-active")
+});
+
+SignInButton.addEventListener('click', () => {
+    container.classList.remove("right-panel-active")
+});
+
+</script>
+</div>
+
+</body>
+</html>
